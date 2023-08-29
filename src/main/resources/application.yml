@@ -1,14 +1,14 @@
 spring:
   mail:
-    password:
-    username: victoryjay727@gmail.com
-    host: smtp.gmail.com
+    password: # password
+    username: noreply@tmdwo07278.cafe24.com
+    host: smtp.cafe24.com
     properties:
       mail:
         smtp:
           auth: true
           timeout: 10000
           starttls:
-            enable: true
+            enable: false
     protocol: smtp
     port: 587

@@ -1,10 +1,11 @@
 package com.echoyoun.emailspringsample
 
-import org.springframework.stereotype.Controller
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RestController
 
-@Controller
+@RestController
 class EmailController(
     private val mailService: MailService
 ) {
@@ -14,5 +15,10 @@ class EmailController(
         mailVo: MailVo
     ): Unit {
         mailService.sendMail(mailVo)
+    }
+
+    @GetMapping("/verify")
+    fun verifyMail(): String {
+        return "Verified!"
     }
 }
